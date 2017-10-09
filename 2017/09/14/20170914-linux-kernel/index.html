@@ -6,17 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://ncuwff.github.io">
-  <title>Feng的技术探索</title>
+  <title>20170914_linux_kernel | Feng的技术探索</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="嵌入式软件工程师一枚">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Feng的技术探索">
-<meta property="og:url" content="https://ncuwff.github.io/index.html">
+  <meta name="description" content="1、在内核源代码中，platform 设备的初始化（注册）用arch_initcall（）调用，它的initcall 的level为3； 而驱动的注册用module_init（）调用，即device_initcall（），它的initcall 的level为6。level小的初始化函数先于level大的初始化函数被调用。    所以platform设备先被注册，驱动加载时会调用驱动程序中的prob">
+<meta property="og:type" content="article">
+<meta property="og:title" content="20170914_linux_kernel">
+<meta property="og:url" content="https://ncuwff.github.io/2017/09/14/20170914-linux-kernel/index.html">
 <meta property="og:site_name" content="Feng的技术探索">
-<meta property="og:description" content="嵌入式软件工程师一枚">
+<meta property="og:description" content="1、在内核源代码中，platform 设备的初始化（注册）用arch_initcall（）调用，它的initcall 的level为3； 而驱动的注册用module_init（）调用，即device_initcall（），它的initcall 的level为6。level小的初始化函数先于level大的初始化函数被调用。    所以platform设备先被注册，驱动加载时会调用驱动程序中的prob">
+<meta property="og:updated_time" content="2017-09-14T12:29:09.308Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Feng的技术探索">
-<meta name="twitter:description" content="嵌入式软件工程师一枚">
+<meta name="twitter:title" content="20170914_linux_kernel">
+<meta name="twitter:description" content="1、在内核源代码中，platform 设备的初始化（注册）用arch_initcall（）调用，它的initcall 的level为3； 而驱动的注册用module_init（）调用，即device_initcall（），它的initcall 的level为6。level小的初始化函数先于level大的初始化函数被调用。    所以platform设备先被注册，驱动加载时会调用驱动程序中的prob">
   
     <link rel="alternative" href="/atom.xml" title="Feng的技术探索" type="application/atom+xml">
   
@@ -144,16 +145,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-20170914-linux-kernel" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-20170914-linux-kernel" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/14/20170914-linux-kernel/">20170914_linux_kernel</a>
+    <h1 class="article-title" itemprop="name">
+      20170914_linux_kernel
     </h1>
   
 
@@ -176,6 +175,37 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢您！让我探索的路途不再孤单……<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/image/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/image/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -183,16 +213,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/14/20170914-linux-kernel/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://ncuwff.github.io/2017/09/14/20170914-linux-kernel/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/08/18/diary_20170818/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">机器学习初识</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -212,248 +301,12 @@
 
 
 
-
   
-    <article id="post-diary_20170818" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/18/diary_20170818/">机器学习初识</a>
-    </h1>
   
 
-        
-        <a href="/2017/08/18/diary_20170818/" class="archive-article-date">
-  	<time datetime="2017-08-18T12:20:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>1.人工智能，为机器赋予人的智能；机器学习，实现人工智能的一种方法；深度学习，一种实现机器学习的技术。<br>2.机器学习最基本的做法，是使用算法来解析数据、从中学习，然后对真实世界中的事件做出决策和预测。<br>3.机器学习问题在早期的工程领域也经常称为模式识别（Pattern Recognition,PR），但模式识别更偏向于具体的应用任务，比如光学字符识别、语音识别，人脸识别等。随着机器学习技术的应用越来越广，现在机器学习的概念逐渐替代模式识别，成为这一类方法的统称。<br>
-        
-          <a class="article-more-a" href="/2017/08/18/diary_20170818/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">深度学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/18/diary_20170818/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-diary_20170809" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/09/diary_20170809/">技能框架</a>
-    </h1>
   
 
-        
-        <a href="/2017/08/09/diary_20170809/" class="archive-article-date">
-  	<time datetime="2017-08-09T10:32:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>基础技能：语言+协议+系统</strong></p>
-<blockquote>
-<ul>
-<li>C语言</li>
-<li>C++</li>
-<li>Python</li>
-<li>Linux驱动</li>
-<li>Linux应用</li>
-<li>Android驱动</li>
-<li>ARM</li>
-<li>接口通信协议</li>
-</ul>
-</blockquote>
-        
-          <a class="article-more-a" href="/2017/08/09/diary_20170809/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/09/diary_20170809/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-diary_201707312033" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/31/diary_201707312033/">我的第一篇博客</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/31/diary_201707312033/" class="archive-article-date">
-  	<time datetime="2017-07-31T11:32:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>很久以前，就有了在github上建一个博客的想法，试过好多次，但都只有开头，然后就没有然后了。<br>这一次，建好这博客，就希望能坚持认真写下去。<br>
-        
-          <a class="article-more-a" href="/2017/07/31/diary_201707312033/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/31/diary_201707312033/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -476,8 +329,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

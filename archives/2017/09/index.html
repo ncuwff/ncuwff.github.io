@@ -6,12 +6,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://ncuwff.github.io">
-  <title>Feng的技术探索</title>
+  <title>Archives: 2017/9 | Feng的技术探索</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="嵌入式软件工程师一枚">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Feng的技术探索">
-<meta property="og:url" content="https://ncuwff.github.io/index.html">
+<meta property="og:url" content="https://ncuwff.github.io/archives/2017/09/index.html">
 <meta property="og:site_name" content="Feng的技术探索">
 <meta property="og:description" content="嵌入式软件工程师一枚">
 <meta name="twitter:card" content="summary">
@@ -146,315 +146,47 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-20170914-linux-kernel" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/14/20170914-linux-kernel/">20170914_linux_kernel</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/14/20170914-linux-kernel/" class="archive-article-date">
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/09/14/20170914-linux-kernel/" class="archive-article-date">
   	<time datetime="2017-09-14T02:56:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-14</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1、在内核源代码中，platform 设备的初始化（注册）用arch_initcall（）调用，它的initcall 的level为3；</p>
-<p>而驱动的注册用module_init（）调用，即device_initcall（），它的initcall 的level为6。<br>level小的初始化函数先于level大的初始化函数被调用。<br>    所以platform设备先被注册，驱动加载时会调用驱动程序中的probe（），扫描系统中已注册的设备，找到匹配设备后将驱动和设备绑定。</p>
-<p>2、/proc下面的内容会随着内核的配置和工作的状态在变化，比如/proc/meminfo这个文件，里面的内容是内存信息，不同的机器自然不同；还有就是/proc目录下面用数字命名的子目录，每个子目录的名字也就是数字，对应当前系统正在运行的进程，而子目录里面的内容就是对应进程的信息。</p>
-<p>3、系统在管理的时候，不管是内存还是外设都需要分配一个内存地址。对于一个32bit的系统来讲，可寻址的范围为2^32=4G的地址空间。<br>既然说到地址空间，就要明确地址空间的种类：物理地址、总线地址、虚拟地址。</p>
-<p>4、现代操作系统普遍采用虚拟内存管理（virtual memory management）机制，这需要MMU的支持。MMU通常是CPU的一部分，如果处理器没有MMU，或者有MMU但没有启用，CPU执行单元发出的内存地址将直接传到芯片引脚上，被内存芯片（物理内存）接收，这成为物理地址，如果处理器启用了MMU,CPU执行单元发出的内存地址将被MMU截获，从CPU到MMU的地址称为虚拟地址，而MMU将这个地址翻译成另一个地址发到CPU芯片的外部地址引脚上，也就是讲虚拟地址映射成物理地址。</p>
-<p>5、同一级别的初始化是和编译顺序有关的，并不是和设备列表一致。<br>调整驱动加载顺序还可以通过使用不同级别的初始化。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/14/20170914-linux-kernel/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-diary_20170818" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/18/diary_20170818/">机器学习初识</a>
+      <a class="archive-article-title" href="/2017/09/14/20170914-linux-kernel/">20170914_linux_kernel</a>
     </h1>
   
 
-        
-        <a href="/2017/08/18/diary_20170818/" class="archive-article-date">
-  	<time datetime="2017-08-18T12:20:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>1.人工智能，为机器赋予人的智能；机器学习，实现人工智能的一种方法；深度学习，一种实现机器学习的技术。<br>2.机器学习最基本的做法，是使用算法来解析数据、从中学习，然后对真实世界中的事件做出决策和预测。<br>3.机器学习问题在早期的工程领域也经常称为模式识别（Pattern Recognition,PR），但模式识别更偏向于具体的应用任务，比如光学字符识别、语音识别，人脸识别等。随着机器学习技术的应用越来越广，现在机器学习的概念逐渐替代模式识别，成为这一类方法的统称。<br>
-        
-          <a class="article-more-a" href="/2017/08/18/diary_20170818/#more">more >></a>
-        
-      
+        <div class="article-info info-on-right">
+          
+          
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">深度学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/18/diary_20170818/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-diary_20170809" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/09/diary_20170809/">技能框架</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/09/diary_20170809/" class="archive-article-date">
-  	<time datetime="2017-08-09T10:32:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>基础技能：语言+协议+系统</strong></p>
-<blockquote>
-<ul>
-<li>C语言</li>
-<li>C++</li>
-<li>Python</li>
-<li>Linux驱动</li>
-<li>Linux应用</li>
-<li>Android驱动</li>
-<li>ARM</li>
-<li>接口通信协议</li>
-</ul>
-</blockquote>
-        
-          <a class="article-more-a" href="/2017/08/09/diary_20170809/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/09/diary_20170809/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-diary_201707312033" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/31/diary_201707312033/">我的第一篇博客</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/31/diary_201707312033/" class="archive-article-date">
-  	<time datetime="2017-07-31T11:32:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>很久以前，就有了在github上建一个博客的想法，试过好多次，但都只有开头，然后就没有然后了。<br>这一次，建好这博客，就希望能坚持认真写下去。<br>
-        
-          <a class="article-more-a" href="/2017/07/31/diary_201707312033/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/31/diary_201707312033/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -476,9 +208,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
-		isArchive: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
