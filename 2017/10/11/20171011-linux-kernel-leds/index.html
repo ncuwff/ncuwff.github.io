@@ -6,19 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://ncuwff.github.io">
-  <title>机器学习初识 | Feng的技术探索</title>
+  <title>20171011_linux_kernel_leds | Feng的技术探索</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="概念1.人工智能，为机器赋予人的智能；机器学习，实现人工智能的一种方法；深度学习，一种实现机器学习的技术。2.机器学习最基本的做法，是使用算法来解析数据、从中学习，然后对真实世界中的事件做出决策和预测。3.机器学习问题在早期的工程领域也经常称为模式识别（Pattern Recognition,PR），但模式识别更偏向于具体的应用任务，比如光学字符识别、语音识别，人脸识别等。随着机器学习技术的应用越">
-<meta name="keywords" content="深度学习">
+  <meta name="description" content="#include  struct gpio_led {    const char name;    const char default_trigger;    unsigned     gpio;    unsigned    active_low : 1;    unsigned    retain_state_suspended : 1;    unsigned    default_st">
 <meta property="og:type" content="article">
-<meta property="og:title" content="机器学习初识">
-<meta property="og:url" content="https://ncuwff.github.io/2017/08/18/diary_20170818/index.html">
+<meta property="og:title" content="20171011_linux_kernel_leds">
+<meta property="og:url" content="https://ncuwff.github.io/2017/10/11/20171011-linux-kernel-leds/index.html">
 <meta property="og:site_name" content="Feng的技术探索">
-<meta property="og:description" content="概念1.人工智能，为机器赋予人的智能；机器学习，实现人工智能的一种方法；深度学习，一种实现机器学习的技术。2.机器学习最基本的做法，是使用算法来解析数据、从中学习，然后对真实世界中的事件做出决策和预测。3.机器学习问题在早期的工程领域也经常称为模式识别（Pattern Recognition,PR），但模式识别更偏向于具体的应用任务，比如光学字符识别、语音识别，人脸识别等。随着机器学习技术的应用越">
-<meta property="og:updated_time" content="2017-08-18T12:32:35.261Z">
+<meta property="og:description" content="#include  struct gpio_led {    const char name;    const char default_trigger;    unsigned     gpio;    unsigned    active_low : 1;    unsigned    retain_state_suspended : 1;    unsigned    default_st">
+<meta property="og:updated_time" content="2017-10-11T02:03:10.705Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="机器学习初识">
-<meta name="twitter:description" content="概念1.人工智能，为机器赋予人的智能；机器学习，实现人工智能的一种方法；深度学习，一种实现机器学习的技术。2.机器学习最基本的做法，是使用算法来解析数据、从中学习，然后对真实世界中的事件做出决策和预测。3.机器学习问题在早期的工程领域也经常称为模式识别（Pattern Recognition,PR），但模式识别更偏向于具体的应用任务，比如光学字符识别、语音识别，人脸识别等。随着机器学习技术的应用越">
+<meta name="twitter:title" content="20171011_linux_kernel_leds">
+<meta name="twitter:description" content="#include  struct gpio_led {    const char name;    const char default_trigger;    unsigned     gpio;    unsigned    active_low : 1;    unsigned    retain_state_suspended : 1;    unsigned    default_st">
   
     <link rel="alternative" href="/atom.xml" title="Feng的技术探索" type="application/atom+xml">
   
@@ -146,49 +145,29 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-diary_20170818" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-20171011-linux-kernel-leds" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      机器学习初识
+      20171011_linux_kernel_leds
     </h1>
   
 
         
-        <a href="/2017/08/18/diary_20170818/" class="archive-article-date">
-  	<time datetime="2017-08-18T12:20:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-18</time>
+        <a href="/2017/10/11/20171011-linux-kernel-leds/" class="archive-article-date">
+  	<time datetime="2017-10-11T01:54:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>1.人工智能，为机器赋予人的智能；机器学习，实现人工智能的一种方法；深度学习，一种实现机器学习的技术。<br>2.机器学习最基本的做法，是使用算法来解析数据、从中学习，然后对真实世界中的事件做出决策和预测。<br>3.机器学习问题在早期的工程领域也经常称为模式识别（Pattern Recognition,PR），但模式识别更偏向于具体的应用任务，比如光学字符识别、语音识别，人脸识别等。随着机器学习技术的应用越来越广，现在机器学习的概念逐渐替代模式识别，成为这一类方法的统称。<br><a id="more"></a><br>3.神经网络的原理是受我们大脑的生理结构——互相交叉相连的神经元启发,每一个神经元都为它的输入分配权重，这个权重的正确与否与其执行的任务直接相关。最终的输出由这些权重加总来决定。神经网络是调制、训练出来的，时不时还是很容易出错的。它最需要的，就是训练。需要成百上千甚至数百万数据来训练，直到神经元的输入的权值都被调制得十分精确。“深度学习”中的“深度”就是说神经网络中众多的层。<br>4.过去几年，尤其是2015年以来，人工智能开始大爆发。很大一部分是由于GPU的广泛应用，使得并行计算变得更快、更便宜、更有效。当然，无限拓展的存储能力和骤然爆发的数据洪流（大数据）的组合拳，也使得图像数据、文本数据、交易数据、映射数据全面海量爆发。<br>5.深度学习(Deep Learning, DL)由Hinton等人于2006年提出，是机器学习(MachineLearning, ML)的一个新领域。 深度学习被引入机器学习使其更接近于最初的目标—-人工智能（AI，Artificial Intelligence）。<br>6.深度学习模型和传统浅层学习模型的区别在于：<br>（1）深度学习模型结构含有更多的层次，包含隐层节点的层数通常在5层以上，有时甚至包含多达10层以上的隐藏节点；<br>（2）明确强调了特征学习对于深度模型的重要性，即通过逐层特征提取，将数据样本在原空间的特征变换到一个新的特征空间来表示初始数据，这使得分类或预测问题更加容易实现。和人工设计的特征提取方法相比，利用深度模型学习得到的数据特征对大数据的丰富内在信息更有代表性。</p>
-<h3 id="机器学习类别"><a href="#机器学习类别" class="headerlink" title="机器学习类别"></a>机器学习类别</h3><ul>
-<li>监督学习：是利用一组已知输入x和目标标签y 的数据来学习模型的参数，使得模型预测的目标标签和真实标签尽可能的一致。根据目标标签的类型不同，有监督学习又可以分为回归和分类两类:<br>(a) 回归（Regression）问题：目标标签y 是连续值（实数或连续整数），f(x, θ)的输出也是连续值。对于所有已知或未知的(x, y)，使得f(x, θ)和y 尽可能地一致。<br>(b) 分类（Classification）问题：目标标签y 是离散的类别（符号）。在分类问题中，通过学习得到的决策函数f(x, θ)也叫分类器。分类问题根据其类别数量可分为两类分类（Binary Classification）和多类分类（Multi-class Classification）。</li>
-<li>无监督学习（Unsupervised Learning）是用来学习的数据不包含目标标签，需要学习算法自动学习到一些有价值的信息。典型的无监督学习问题有聚类（Clustering）、降维、密度估计等。</li>
-<li>增强学习（Reinforcement Learning）也叫强化学习，强调如何基于环境做出一系列的动作，以取得最大化的累积收益。每做出一个动作，并不一定立刻得到收益。增强学习和有监督学习的不同在于增强学习不需要显式地以输入/输出对的方式给出训练样本，是一种在线的学习机制。</li>
-<li>有监督的学习方法需要每个数据记录都有类标号，而无监督的学习方法则不考虑任何指导性信息。一般而言，一个监督学习模型需要大量的有标记数据集，而这些数据集是需要人工标注的。因此，也出现了很多弱监督学习和半监督学习的方法，希望从大规模的未标记数据中充分挖掘有用的信息，降低对标记数据数量的要求。</li>
-</ul>
-<h3 id="机器学习算法"><a href="#机器学习算法" class="headerlink" title="机器学习算法"></a>机器学习算法</h3><ul>
-<li>回归算法</li>
-<li>基于实例的算法</li>
-<li>正则化方法</li>
-<li>决策树学习</li>
-<li>贝叶斯方法</li>
-<li>基于核的算法</li>
-<li>聚类算法</li>
-<li>关联规则学习</li>
-<li>遗传算法（genetic algorithm）</li>
-<li>人工神经网络</li>
-<li>深度学习</li>
-<li>降低维度算法</li>
-<li>集成算法</li>
-</ul>
-<p><strong> 引用 </strong><br>[1] <a href="https://www.leiphone.com/news/201609/gox8CoyqMrXMi4L4.html" target="_blank" rel="external">人工智能、机器学习和深度学习之间的区别和联系</a><br>[2] <a href="http://www.cnblogs.com/maybe2030/p/4665816.html" target="_blank" rel="external">机器学习常见算法分类汇总</a><br>[3] <a href="https://zh.wikipedia.org/wiki/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0" target="_blank" rel="external">维基百科：机器学习</a><br>[4] <a href="http://www.voidcn.com/article/p-urczeiuh-va.html" target="_blank" rel="external">深度学习概述</a><br>[5] <a href="https://nndl.github.io/ch3.pdf" target="_blank" rel="external">机器学习概述</a></p>
+        <p>#include <linux leds.h=""></linux></p>
+<p>struct gpio_led {<br>    const char <em>name;<br>    const char </em>default_trigger;<br>    unsigned     gpio;<br>    unsigned    active_low : 1;<br>    unsigned    retain_state_suspended : 1;<br>    unsigned    default_state : 2;<br>    /<em> default_state should be one of LEDS_GPIO<em>DEFSTATE</em>(ON|OFF|KEEP) </em>/<br>};</p>
+<p>struct gpio_led_platform_data {<br>    int         num_leds;<br>    const struct gpio_led *leds;<br>    };</p>
 
       
 
@@ -228,17 +207,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">深度学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -289,7 +257,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://ncuwff.github.io/2017/08/18/diary_20170818/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://ncuwff.github.io/2017/10/11/20171011-linux-kernel-leds/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -303,18 +271,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/09/14/20170914-linux-kernel/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          20170914_linux_kernel
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/08/09/diary_20170809/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">技能框架</div>
+    <a href="/2017/10/10/20171010-cmake/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">20171010_cmake</div>
       <i class="icon-circle-right"></i>
     </a>
   
