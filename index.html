@@ -146,133 +146,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-20171011-linux-kernel-leds" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/11/20171011-linux-kernel-leds/">20171011_linux_kernel_leds</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/11/20171011-linux-kernel-leds/" class="archive-article-date">
-  	<time datetime="2017-10-11T01:54:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#include <linux leds.h=""></linux></p>
-<p>struct gpio_led {<br>    const char <em>name;<br>    const char </em>default_trigger;<br>    unsigned     gpio;<br>    unsigned    active_low : 1;<br>    unsigned    retain_state_suspended : 1;<br>    unsigned    default_state : 2;<br>    /<em> default_state should be one of LEDS_GPIO<em>DEFSTATE</em>(ON|OFF|KEEP) </em>/<br>};</p>
-<p>struct gpio_led_platform_data {<br>    int         num_leds;<br>    const struct gpio_led *leds;<br>    };</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/11/20171011-linux-kernel-leds/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20171010-cmake" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/10/20171010-cmake/">20171010_cmake</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/10/20171010-cmake/" class="archive-article-date">
-  	<time datetime="2017-10-10T03:28:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/10/20171010-cmake/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-20170914-linux-kernel" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -341,19 +214,19 @@
 
 
   
-    <article id="post-diary_20170818" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-20170818_machine_learning" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/18/diary_20170818/">机器学习初识</a>
+      <a class="article-title" href="/2017/08/18/20170818_machine_learning/">机器学习初识</a>
     </h1>
   
 
         
-        <a href="/2017/08/18/diary_20170818/" class="archive-article-date">
+        <a href="/2017/08/18/20170818_machine_learning/" class="archive-article-date">
   	<time datetime="2017-08-18T12:20:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-18</time>
 </a>
         
@@ -363,7 +236,7 @@
       
         <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>1.人工智能，为机器赋予人的智能；机器学习，实现人工智能的一种方法；深度学习，一种实现机器学习的技术。<br>2.机器学习最基本的做法，是使用算法来解析数据、从中学习，然后对真实世界中的事件做出决策和预测。<br>3.机器学习问题在早期的工程领域也经常称为模式识别（Pattern Recognition,PR），但模式识别更偏向于具体的应用任务，比如光学字符识别、语音识别，人脸识别等。随着机器学习技术的应用越来越广，现在机器学习的概念逐渐替代模式识别，成为这一类方法的统称。<br>
         
-          <a class="article-more-a" href="/2017/08/18/diary_20170818/#more">more >></a>
+          <a class="article-more-a" href="/2017/08/18/20170818_machine_learning/#more">more >></a>
         
       
 
@@ -387,7 +260,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/18/diary_20170818/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/08/18/20170818_machine_learning/">展开全文 >></a>
         </p>
       
 
@@ -417,19 +290,19 @@
 
 
   
-    <article id="post-diary_20170809" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-20170809_target" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/09/diary_20170809/">技能框架</a>
+      <a class="article-title" href="/2017/08/09/20170809_target/">技能框架</a>
     </h1>
   
 
         
-        <a href="/2017/08/09/diary_20170809/" class="archive-article-date">
+        <a href="/2017/08/09/20170809_target/" class="archive-article-date">
   	<time datetime="2017-08-09T10:32:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-09</time>
 </a>
         
@@ -451,7 +324,7 @@
 </ul>
 </blockquote>
         
-          <a class="article-more-a" href="/2017/08/09/diary_20170809/#more">more >></a>
+          <a class="article-more-a" href="/2017/08/09/20170809_target/#more">more >></a>
         
       
 
@@ -475,7 +348,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/09/diary_20170809/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/08/09/20170809_target/">展开全文 >></a>
         </p>
       
 
@@ -505,19 +378,19 @@
 
 
   
-    <article id="post-diary_201707312033" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-20170731_first_blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/31/diary_201707312033/">我的第一篇博客</a>
+      <a class="article-title" href="/2017/07/31/20170731_first_blog/">我的第一篇博客</a>
     </h1>
   
 
         
-        <a href="/2017/07/31/diary_201707312033/" class="archive-article-date">
+        <a href="/2017/07/31/20170731_first_blog/" class="archive-article-date">
   	<time datetime="2017-07-31T11:32:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-31</time>
 </a>
         
@@ -527,7 +400,7 @@
       
         <p>很久以前，就有了在github上建一个博客的想法，试过好多次，但都只有开头，然后就没有然后了。<br>这一次，建好这博客，就希望能坚持认真写下去。<br>
         
-          <a class="article-more-a" href="/2017/07/31/diary_201707312033/#more">more >></a>
+          <a class="article-more-a" href="/2017/07/31/20170731_first_blog/#more">more >></a>
         
       
 
@@ -551,7 +424,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/31/diary_201707312033/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/07/31/20170731_first_blog/">展开全文 >></a>
         </p>
       
 
@@ -674,11 +547,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">总结</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">总结</a>
               </li>
              
               <li class="article-tag-list-item">
