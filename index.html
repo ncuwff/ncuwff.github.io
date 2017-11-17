@@ -146,6 +146,203 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-20171117-音量分贝值与百分比之间的转换" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/17/20171117-音量分贝值与百分比之间的转换/">20171117-音量分贝值与百分比之间的转换</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/17/20171117-音量分贝值与百分比之间的转换/" class="archive-article-date">
+  	<time datetime="2017-11-17T05:49:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>P：百分比<br>a：当前音量分贝值<br>m：最大音量分贝值</p>
+<p>P＝ 10 ^ [ (a - m) / 10 ]<br>a = 10lgP + m</p>
+<p>例如，假设最大音量为0dB，当音量为10%时，分贝值为：<br>a = 10lg0.1 +0 = -10dB，即<br>10% = 10 ^ [ ( -10 - 0) / 10]</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/17/20171117-音量分贝值与百分比之间的转换/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-20171024-cross-compile-gstreamer" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/24/20171024-cross-compile-gstreamer/">20171024_cross_compile_gstreamer</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/24/20171024-cross-compile-gstreamer/" class="archive-article-date">
+  	<time datetime="2017-10-24T01:38:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>pkg-config –list-all</p>
+<p>$gcc main.c <code>pkg-config --cflags --libs gtk+-2.0</code> -o main<br>        上面的编译命令中，<code>pkg-config --cflags --libs gtk+-2.0</code>的作用就如前面所说的，把gtk的头文件路径和库文件列出来，让编译去获取。–cflags和–libs分别指定头文件和库文件。<br>        Ps:命令中的`不是引号，而是数字1左边那个键位的那个符号。<br>pkg-config命令是通过查询XXX.pc文件从而知道第三方库的头文件和库路径。</p>
+<p>PKG_CONFIG_PATH了。这环境变量写明.pc文件的路径，pkg-config命令会读取这个环境变量的内容，这样就知道pc文件了。</p>
+<p>export PKG_CONFIG_PATH=/home/fenger/workshop/01_avs-device-sdk/02_lib/02_gstreamer/lib/pkgconfig<br>./configure –prefix=/home/fenger/workshop/01_avs-device-sdk/02_lib/02_gstreamer/</p>
+<p>./configure CC=arm-linux-gnueabi-gcc CXX=arm-linux-gnurabi-g++ –host=arm-linux –build=i686-linux –prefix=/home/kclin/workspace/cross_result/pkg_config/ RANLIB=arm-linux-gnueabi-ranlib LD=arm-linux-gnueabi-ld –cache-file=arm-linux.cache LIBS=”-L/home/kclin/workspace/cross_result/pkg_config/lib -lffi” CFLAGS=”-I/home/kclin/workspace/cross_result/pkg_config/lib/libffi-3.0.13/include -I/home/kclin/workspace/cross_result/pkg_config/include”</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/24/20171024-cross-compile-gstreamer/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-20171020-linux-kernel-module-note" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/20/20171020-linux-kernel-module-note/">20171020_linux_kernel_module_note</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/20/20171020-linux-kernel-module-note/" class="archive-article-date">
+  	<time datetime="2017-10-20T09:29:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、Kernel Module的Makefile:<br>
+        
+          <a class="article-more-a" href="/2017/10/20/20171020-linux-kernel-module-note/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/20/20171020-linux-kernel-module-note/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-20170914-linux-kernel" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
